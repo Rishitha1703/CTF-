@@ -1,0 +1,19 @@
+The process you mentioned involves multiple decoding and transformation steps to extract the flag. Here's a breakdown of the steps you can follow:
+
+1.Base64 Decode: 
+   The first encoded text (`YidkM0JxZGtwQlRYdHFhR3g2YUhsZmF6TnFlVGwzWVROclgya3lNRFJvYTJvMmZRPT0nCg==`) is Base64-encoded. When decoded, it produces another Base64- 
+   encoded string: `b'd3BqdkpBTXtqaGx6aHlfazNqeTl3YTNrX2kyMDRoa2o2fQ=='`.
+
+2. Remove `b'` and `'`: 
+   After removing `b'` and `'`, you're left with the clean Base64 string `d3BqdkpBTXtqaGx6aHlfazNqeTl3YTNrX2kyMDRoa2o2fQ==`.
+
+3. Base64 Decode Again: 
+   When you decode this new Base64 string, it gives: `wpjvJAM{jhlzhy_k3jy9wa3k_i204hkj6}`.
+
+4. Check for ROT13 Cipher: 
+   The decoded string resembles the format of a flag (`picoCTF{}`). You can use ROT13 decoding to reveal the final flag. This can be done using tools like CyberChef or a command-line ROT13 function.
+
+5. Final Flag: 
+   After applying ROT13 to the string `wpjvJAM{jhlzhy_k3jy9wa3k_i204hkj6}`, you'll get the flag: `picoCTF{caesar_d3cr9pt3d_b20...}`.
+
+The ROT13 and Caesar cipher are used in combination to decrypt the message. The command-line approach you provided uses tools like `base64`, `cut`, and `caesar` to decode the text and reveal the flag.
